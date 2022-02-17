@@ -1,0 +1,27 @@
+{
+  "name": "curso-practico-javascript",
+  "version": "1.0.0",
+  "description": "Ejercicios del curso practico de javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch assets/sass/main.scss:assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenzorojo12/curso-practico-javascript.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Lorenzo Rojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorenzorojo12/curso-practico-javascript/issues"
+  },
+  "homepage": "https://github.com/lorenzorojo12/curso-practico-javascript#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.7"
+  }
+}
