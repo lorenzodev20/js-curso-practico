@@ -1324,6 +1324,10 @@ article:last-child {
   margin: 0 auto;
   width: auto;
 }
+.image.img-border {
+  border: 1px solid;
+  max-height: 326px;
+}
 
 /* Button */
 input[type=button],

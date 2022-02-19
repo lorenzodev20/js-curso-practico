@@ -16,7 +16,26 @@ function areaTriangulo(base, altura) {
   return (base * altura) / 2;
 }
 
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+  // console.log(trianguloGrandeLadoA +" - "+ trianguloGrandeLadoB);
+  if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+      // console.error("Los lados a y b no son iguales");
+      return "Los lados a y b no son iguales";
+  } else {
+      const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+      const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+      const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+      const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+
+      const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+      const trianguloGrandeAltura = trianguloPequenoLadoA;
+      return trianguloGrandeAltura;
+  }
+}
 // Funciones para el circulo
+
 // Diámetro
 function diametroCirculo(radio) {
   return radio * 2;
@@ -57,29 +76,58 @@ function calcularAreaCuadrado() {
 // Acciones HTML TRIANGULO
 
 function calcularPerimetroTriangulo(){
+
   const lado1 = document.getElementById("InputLadoUnoTriangulo");
   const lado1Value = parseInt(lado1.value);
+
   const lado2 = document.getElementById("InputLadoDosTriangulo");
   const lado2Value = parseInt(lado2.value);
+
   const base = document.getElementById("InputBaseTriangulo");
   const baseValue = parseInt(base.value);
 
   const perimetro = perimetroTriangulo(lado1Value,lado2Value,baseValue);
+
   alert("EL PERIMETRO DEL TRIANGULO ES: "+ perimetro);
 }
 
 function calcularAreaTriangulo(){
+
   const lado1 = document.getElementById("InputLadoUnoTriangulo");
   const lado1Value = parseInt(lado1.value);
+
   const lado2 = document.getElementById("InputLadoDosTriangulo");
   const lado2Value = parseInt(lado2.value);
+
   const base = document.getElementById("InputBaseTriangulo");
   const baseValue = parseInt(base.value);
 
   const altura = lado1Value+lado2Value;
 
   const area = areaTriangulo(baseValue,altura);
+
   alert("EL AREA DEL TRIANGULO ES: "+ area);
+}
+
+function calcularAlturaTrianguloIsoceles(){
+
+  const lado1 = document.getElementById("InputLadoUnoTriangulo");
+  const lado1Value = parseInt(lado1.value);
+
+  const lado2 = document.getElementById("InputLadoDosTriangulo");
+  const lado2Value = parseInt(lado2.value);
+
+  const base = document.getElementById("InputBaseTriangulo");
+  const baseValue = parseInt(base.value);
+
+  const altura = alturaTrianguloIsosceles(lado1Value, lado2Value, base);
+
+  if (altura>0) {
+    alert("LA ALTURA DEL TRIANGULO ISOCELES ES: "+ altura);
+  }else{
+    alert(altura);
+  }
+
 }
 
 // Acciones HTML CIRCULO

@@ -472,6 +472,11 @@
 				width: auto;
 			}
 		}
+
+		&.img-border{
+			border: 1px solid;
+			max-height: 326px;
+		}
 	}
 
 /* Button */
