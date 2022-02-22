@@ -19,13 +19,20 @@
 
     <form>
       <label for="InputPrice">Escribe el precio de tu producto:</label>
-      <input id="InputPrice" type="number" />
+      <input id="InputPrice" type="number" /><br>
 
       <label for="InputDiscount">Escribe el descuento de tu producto:</label>
-      <input id="InputDiscount" type="number" />
+      <input id="InputDiscount" type="number" /><br>
+
+      <label for="InputCuponCode">Escribe el código del cupón (En caso de que tengas uno) </label>
+      <input id="InputCuponCode" type="text" /><br>
 
       <button type="button" onclick="onClickButtonPriceDiscount()">
-        Calcular el precio con descuento
+        Calcular el precio con porcentaje de descuento
+      </button>
+
+      <button type="button" onclick="onClickButtonPriceDiscountCoupon()">
+        Calcular el precio con cupón de descuento
       </button>
 
       <p id="ResultP"></p>
