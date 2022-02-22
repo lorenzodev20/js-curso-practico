@@ -120,7 +120,7 @@ function calcularAlturaTrianguloIsoceles(){
   const base = document.getElementById("InputBaseTriangulo");
   const baseValue = parseInt(base.value);
 
-  const altura = alturaTrianguloIsosceles(lado1Value, lado2Value, base);
+  const altura = alturaTrianguloIsosceles(lado1Value, lado2Value, baseValue);
 
   if (altura>0) {
     alert("LA ALTURA DEL TRIANGULO ISOCELES ES: "+ altura);
