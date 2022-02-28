@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../assets/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>
+      Porcentajes y descuentos | Curso Práctico de JavaScript en Platzi
+    </title>
+  </head>
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">JavaScript Práctico</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller1.html">Taller #1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="taller2.html">Taller #2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller3.html">Taller #3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller4.html">Taller #4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Titulo de la seccion -->
+    <section>
+      <div class="px-4 py-5 my-2 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="../assets/img/javascript.png"
+          alt=""
+          width="72"
+          height="57"
+        />
+        <h1 class="display-5 fw-bold">Descuentos</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Este es el segundo taller del curso práctico de JavaScript
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row mb-3">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+          <form class="border border-3 p-3 mt-3">
+
+            <div class="mb-3">
+              <label for="InputPrice" class="form-label">Escribe el precio de tu producto:</label>
+              <input id="InputPrice" type="number" class="form-control"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="InputDiscount" class="form-label">Escribe el descuento de tu producto:</label>
+              <input id="InputDiscount" type="number" class="form-control"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="InputCuponCode" class="form-label">Escribe el código del cupón (En caso de que tengas uno)</label>
+              <input id="InputCuponCode" type="text" class="form-control"/>
+            </div>
+
+            <div class="mb-3" id="ResultP"></div>
+
+            <div class="d-grid gap-2">
+              <button type="button" onclick="onClickButtonPriceDiscount()"  class="btn btn-primary">
+                Calcular el precio con porcentaje de descuento
+              </button>
+        
+              <button type="button" onclick="onClickButtonPriceDiscountCoupon()"  class="btn btn-secondary">
+                Calcular el precio con cupón de descuento
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2022 Lorenzo Rojo </p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Contacta conmigo</a></li>
+        <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+        <li class="list-inline-item"><a href="#">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <script src="../assets/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="../src/descuentos.js"></script>
+  </body>
+</html>

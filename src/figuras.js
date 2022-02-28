@@ -1,4 +1,7 @@
-// Funciones para el cuadrado
+/**
+ * Funciones para el cuadrado
+ */
+
 function perimetroCuadrado(lado) {
   return lado * 4;
 }
@@ -6,55 +9,6 @@ function perimetroCuadrado(lado) {
 function areaCuadrado(lado) {
   return lado * lado;
 }
-
-// Funciones para Triangulo
-function perimetroTriangulo(lado1, lado2, base) {
-  return lado1 + lado2 + base;
-}
-
-function areaTriangulo(base, altura) {
-  return (base * altura) / 2;
-}
-
-function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
-  // console.log(trianguloGrandeLadoA +" - "+ trianguloGrandeLadoB);
-  if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
-      // console.error("Los lados a y b no son iguales");
-      return "Los lados a y b no son iguales";
-  } else {
-      const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
-      const trianguloPequenoLadoBase = trianguloGrandeLadoA;
-
-      const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
-      const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
-
-      const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
-
-      const trianguloGrandeAltura = trianguloPequenoLadoA;
-      return trianguloGrandeAltura;
-  }
-}
-// Funciones para el circulo
-
-// Diámetro
-function diametroCirculo(radio) {
-  return radio * 2;
-}
-
-// PI
-const PI = Math.PI;
-
-// Circunferencia
-function perimetroCirculo(radio) {
-  const diametro = diametroCirculo(radio);
-  return diametro * PI;
-}
-
-// Área
-function areaCirculo(radio) {
-  return (radio * radio) * PI;
-}
-
 
 // Acciones HTML CUADRADO
 function calcularPerimetroCuadrado() {
@@ -75,13 +29,41 @@ function calcularAreaCuadrado() {
   const value = input.value;
 
   const area = areaCuadrado(value);
-  // alert("EL AREA DEL CUADRADO ES: "+area);
 
   // Respuesta en HTML
   const RpsCuadrado = document.getElementById("RpsCuadrado");
   RpsCuadrado.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
   'EL AREA DEL CUADRADO ES: <strong> '+area+'</strong>'+
   '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+}
+
+/**
+ * Funciones para el Triangulo
+ */
+
+function perimetroTriangulo(lado1, lado2, base) {
+  return lado1 + lado2 + base;
+}
+
+function areaTriangulo(base, altura) {
+  return (base * altura) / 2;
+}
+
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+  if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+      return "Los lados a y b no son iguales";
+  } else {
+      const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+      const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+      const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+      const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+
+      const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+      const trianguloGrandeAltura = trianguloPequenoLadoA;
+      return trianguloGrandeAltura;
+  }
 }
 
 // Acciones HTML TRIANGULO
@@ -99,7 +81,11 @@ function calcularPerimetroTriangulo(){
 
   const perimetro = perimetroTriangulo(lado1Value,lado2Value,baseValue);
 
-  alert("EL PERIMETRO DEL TRIANGULO ES: "+ perimetro);
+  // Respuesta en HTML
+  const RpsTriangulo = document.getElementById("RpsTriangulo");
+  RpsTriangulo.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+  'EL PERIMETRO DEL TRIANGULO ES: <strong> '+perimetro+'</strong>'+
+  '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }
 
 function calcularAreaTriangulo(){
@@ -117,7 +103,11 @@ function calcularAreaTriangulo(){
 
   const area = areaTriangulo(baseValue,altura);
 
-  alert("EL AREA DEL TRIANGULO ES: "+ area);
+  // Respuesta en HTML
+  const RpsTriangulo = document.getElementById("RpsTriangulo");
+  RpsTriangulo.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+  'EL AREA DEL TRIANGULO ES: <strong> '+area+'</strong>'+
+  '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }
 
 function calcularAlturaTrianguloIsoceles(){
@@ -134,11 +124,42 @@ function calcularAlturaTrianguloIsoceles(){
   const altura = alturaTrianguloIsosceles(lado1Value, lado2Value, baseValue);
 
   if (altura>0) {
-    alert("LA ALTURA DEL TRIANGULO ISOCELES ES: "+ altura);
+    // Respuesta en HTML
+    const RpsTriangulo = document.getElementById("RpsTriangulo");
+    RpsTriangulo.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+    'LA ALTURA DEL TRIANGULO ISOCELES ES: <strong> '+altura+'</strong>'+
+    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   }else{
-    alert(altura);
+    // Respuesta en HTML
+    const RpsTriangulo = document.getElementById("RpsTriangulo");
+    RpsTriangulo.innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
+    '<strong> '+altura+'</strong>'+
+    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   }
 
+}
+
+/**
+ * Funciones para el circulo
+ */
+
+// Diámetro
+function diametroCirculo(radio) {
+  return radio * 2;
+}
+
+// PI
+const PI = Math.PI;
+
+// Circunferencia
+function perimetroCirculo(radio) {
+  const diametro = diametroCirculo(radio);
+  return diametro * PI;
+}
+
+// Área
+function areaCirculo(radio) {
+  return (radio * radio) * PI;
 }
 
 // Acciones HTML CIRCULO

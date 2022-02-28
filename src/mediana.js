@@ -1,13 +1,13 @@
 // Taller #3: Calculando la Mediana 
 
 // Declaro mi array
-const lista1 = [
+/* const lista1 = [
     200,
     600,
     400000000,
     100,
     500,
-];
+]; */
 
 function calcularMediaAritmetica(lista) {
     const sumaLista = lista.reduce(
@@ -53,6 +53,45 @@ function calcularMediana(lista) {
     }
 
     return mediana;
+}
+
+function calcularMedianaLista(){
+
+    const listaElementos = document.getElementsByName("campo");
+    let lista = [];
+
+    for (let i = 0; i < listaElementos.length; i++) {
+
+        if (listaElementos[i].value>0) {
+            const valor = parseFloat(listaElementos[i].value);
+            lista.push(valor);
+        }
+    }
+
+    if (lista.length>0) {
+        return calcularMediana(lista);
+    }else{
+        return 'La lista esta vacia o no tiene valores';
+    }
+    
+}
+
+function ejecutarMediana() {
+    const respuesta = calcularMedianaLista();
+
+    if (respuesta>0) {
+        // Respuesta en HTML
+        const RpsPromedio = document.getElementById("RpsPromedio");
+        RpsPromedio.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+        'LA MEDIANA DE LA LISTA ES: <strong> '+respuesta+'</strong>'+
+        '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    }else{
+        // Respuesta en HTML
+        const RpsPromedio = document.getElementById("RpsPromedio");
+        RpsPromedio.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">'+
+        '<strong>'+respuesta+'</strong>'+
+        '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    }
 }
 
 

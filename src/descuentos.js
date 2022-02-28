@@ -37,8 +37,11 @@ function onClickButtonPriceDiscount() {
     discountValue
   );
 
-  const resultP = document.getElementById("ResultP");
-  resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+  // Respuesta en HTML
+  const ResultP = document.getElementById("ResultP");
+  ResultP.innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert">'+
+  'El precio con descuento son: <strong> $ '+precioConDescuento+'</strong>'+
+  '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   
 }
 
@@ -59,7 +62,11 @@ function onClickButtonPriceDiscountCoupon(){
   const userCoupon = coupons.find(isCouponValueValid);
   
   if (!userCoupon) {
-    alert("El cupón " + userCouponValue + "no es válido");
+    // Respuesta en HTML
+    const ResultP = document.getElementById("ResultP");
+    ResultP.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">'+
+    'El cupón <strong>'+userCouponValue+'</strong> no es válido'+
+    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   } else {
     const descuento = userCoupon.discount;
 
@@ -68,8 +75,11 @@ function onClickButtonPriceDiscountCoupon(){
       descuento
     );
 
-    const resultP = document.getElementById("ResultP");
-    resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+    // Respuesta en HTML
+    const ResultP = document.getElementById("ResultP");
+    ResultP.innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert">'+
+    'El precio con descuento son: <strong> $ '+precioConDescuento+'</strong>'+
+    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   }
 }
 

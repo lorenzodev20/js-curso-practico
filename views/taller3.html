@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../assets/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+  </head>
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">JavaScript Práctico</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller1.html">Taller #1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller2.html">Taller #2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="taller3.html">Taller #3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="taller4.html">Taller #4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Titulo de la seccion -->
+    <section>
+      <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-2" src="../assets/img/javascript.png" alt="" width="72" height="57">
+        <h1 class="display-5 fw-bold">Promedio, moda y mediana</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Este es el segundo taller del curso práctico de JavaScript</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row mb-3">
+        <!-- Calculo del promedio -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h2>Promedio, Mediana y Moda de una lista</h2>
+
+          <form class="border border-3 p-3 mt-3">
+
+            <div class="d-grid gap-2 mb-3">
+              <button type="button" onclick="AddCampo()"  class="btn btn-success">
+                Agregar Elemento
+              </button>
+            </div>
+
+            <div id="listaElementos">
+              <div class="input-group mb-3" >
+                <span class="input-group-text">Elemento 1: </span>
+                <input type="number"  name="campo" class="form-control campo">
+              </div>
+            </div>
+
+            <div class="mb-3" id="RpsPromedio"></div>
+
+            <div class="d-grid gap-2 mb-3">
+              <button type="button" onclick="ejecutarPromedio()"  class="btn btn-primary">
+                Calcular Promedio
+              </button>
+
+              <button type="button" onclick="ejecutarMediana()"  class="btn btn-secondary">
+                Calcular Mediana
+              </button>
+
+              <button type="button" onclick="ejecutarModa()"  class="btn btn-info">
+                Calcular Moda
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2022 Lorenzo Rojo </p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Contacta conmigo</a></li>
+        <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+        <li class="list-inline-item"><a href="#">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <script src="../assets/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="../src/promedio.js"></script>
+    <script src="../src/mediana.js"></script>
+    <script src="../src/moda.js"></script>
+  </body>
+</html>
