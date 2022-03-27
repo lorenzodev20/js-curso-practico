@@ -1,4 +1,8 @@
 # curso-practico-javascript
+
+## Sitio desplegado github pages: 
+https://lorenzodev20.github.io/curso-practico-javascript/
+
 ## Taller #1: figuras geométricas
 
 - Primer paso: definir las fórmulas
